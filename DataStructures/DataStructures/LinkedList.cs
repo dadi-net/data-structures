@@ -50,7 +50,7 @@ namespace DataStructures
             var current = First;
             while (current != null)
             {
-                Console.Write($"{current.Value}" + (current.Next != null ? "->" : "->null"));
+                current.Print();
                 current = current.Next;
             }
             Console.WriteLine();
