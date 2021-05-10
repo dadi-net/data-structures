@@ -1,4 +1,4 @@
-﻿using DataStructures.LinkedList;
+﻿using DataStructures;
 using System;
 
 namespace LinkedList.Demo
