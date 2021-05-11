@@ -2,44 +2,44 @@
 
 namespace DataStructures
 {
-    public class LinkedList<T>
+    public class SinglyLinkedList<T>
     {
-        public LinkedListNode<T> First { get; set; }
+        public SinglyLinkedListNode<T> Head { get; set; }
+
+        public void AddToHead(T value)
+        {
+            var next = Head;
+            Head = new(value);
+            Head.Next = next;
+        }
 
         public void AddToTail(T value)
         {
-            if (First == null)
+            if (Head == null)
             {
-                First = new(value);
+                Head = new(value);
                 return;
             }
 
-            var current = First;
+            var current = Head;
             while (current.Next != null)
                 current = current.Next;
 
             current.Next = new(value);
         }
 
-        public void AddToHead(T value)
-        {
-            var next = First;
-            First = new(value);
-            First.Next = next;
-        }
-
         public void Reverse()
         {
-            if (First?.Next == null)
+            if (Head?.Next == null)
                 return;
 
-            var current = First.Next;
+            var current = Head.Next;
             var next = current.Next;
-            First.Next = null;
+            Head.Next = null;
             while (current != null)
             {
-                current.Next = First;
-                First = current;
+                current.Next = Head;
+                Head = current;
                 current = next;
                 next = current?.Next;
             }
@@ -47,7 +47,7 @@ namespace DataStructures
 
         public void Print()
         {
-            var current = First;
+            var current = Head;
             while (current != null)
             {
                 current.Print();

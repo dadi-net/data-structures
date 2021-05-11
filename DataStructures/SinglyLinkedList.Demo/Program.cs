@@ -7,7 +7,7 @@ namespace LinkedList.Demo
     {
         static void Main(string[] args)
         {
-            var linkedList = new LinkedList<int>();
+            var linkedList = new SinglyLinkedList<int>();
 
             linkedList.AddToHead(5);
             linkedList.AddToHead(3);
