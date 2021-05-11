@@ -2,12 +2,12 @@
 
 namespace DataStructures
 {
-    public sealed class LinkedListNode<T>
+    public sealed class SinglyLinkedListNode<T>
     {
         public T Value { get; set; }
-        public LinkedListNode<T> Next { get; set; }
+        public SinglyLinkedListNode<T> Next { get; set; }
 
-        public LinkedListNode(T value) => Value = value;
+        public SinglyLinkedListNode(T value) => Value = value;
 
         public void Print()
         {
